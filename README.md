@@ -63,22 +63,35 @@ rbenv versions
 # 나 같은 경우 버전 확인 시, 2.6.3을 system이 사용중이었으므로 변경 필요.
 # *  system
 #    2.6.3 (set by /Users/kds/.rbenv/version)
-#    2.6.6
 
-rbenv global 2.6.6
+rbenv global 2.6.3
 ```
 
+5. Set global config 
+```
+vi ~/.zshrc
 
-7. Install jekyll / bundler by gem on ruby
+export PATH={$Home}/.rbenv/bin:$PATH && \
+eval "$(rbenv init -)"
+```
+
+6. Install jekyll / bundler by gem on ruby
 ```
 gem install jekyll bundler
-# gem의 경우 ruby 에서 제공하는 라이브러리 관리 패키지라고 생각하면 될 듯. node의 npm?
 ```
 
-**Fork master branch to my repository**
-..
+7. Fork master branch to my repository
 
-**Setting your local computer**
+
+8. Setting your local computer
 git clone URL(your master branch on this theme)
 
-**
+9. bundle install in clone directory
+```
+bundle install
+```
+
+10. Start server
+```
+bundle exec jekyll serve
+```
