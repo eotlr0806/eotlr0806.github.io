@@ -47,29 +47,28 @@ GNU General Public License v3.0
 ```
 brew install rbenv ruby-build
 # rbenv 는 ruby의 버전을 독립적으로 관리해주는 패키지.
-# Mac의 경우 Ruby를 system이 사용하고 있으므로, rbenv를 통해 따로 설치하는걸 권장.
-# BigO의 경우 2.6.3을 사용중이었음.
 ```
 3. rbenv versions check and download ruby
 ```
 # 설치 가능 버전 확인
 rbenv install -l
-
-# 나는 2.6.6 설치
-# 기존에 이미 2.6.3 설치 되어있음.
-rbenv install 2.6.6
+# 2.6.3 설치
+rbenv install 2.6.3
 ```
 
 4. check ruby version and change global config
 ```
 rbenv versions
 
+# 나 같은 경우 버전 확인 시, 2.6.3을 system이 사용중이었으므로 변경 필요.
+# *  system
+#    2.6.3 (set by /Users/kds/.rbenv/version)
+#    2.6.6
 
-system
-* 2.6.3 (set by /Users/kds/.rbenv/version)
-  2.6.6
-
+rbenv global 2.6.6
 ```
+
+
 7. Install jekyll / bundler by gem on ruby
 ```
 gem install jekyll bundler
