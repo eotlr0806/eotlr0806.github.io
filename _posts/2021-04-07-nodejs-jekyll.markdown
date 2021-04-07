@@ -24,8 +24,6 @@ ___
 
 ​    
 
-
-
 # What is node.js?
 
 [Node.js 홈페이지 메인](https://nodejs.org/ko/) 에 들어가보면, **Node.js®는 [Chrome V8 JavaScript 엔진](https://v8.dev/)으로 빌드된 JavaScript 런타임입니다.** 라고 명시하고 있다.   
@@ -42,17 +40,13 @@ Javascript 라는 언어를 해석하기 위해서는 Javascript 엔진이 필�
 
 사실 이건 내 의견이라기보다, 이미 Node.js + express 를 통해 간편하게 웹 서버를 구축할 수 있다. 이것은 누구나 아는 사실쓰~
 
-​     
-
 ___
 
-   
-
-   
+​          
 
 # An asynchronous event-driven JavaScript runtime
 
-​    
+
 
 비동기에 대해 정리하기전에 그 반대인 동기방식부터 짚어보자.
 
@@ -163,17 +157,11 @@ readdir 은 비동기로 호출되기에 readdir 함수의 작업이 완료되�
 
 이렇게 Node.js 는 비동기 호출 API들을 제공하며, 해당 API들은 콜백 함수를 선언할 수 있게하여 API에 요청한 작업이 끝나면 콜백함수를 실행 하도록 한다.   
 
-​       
-
 ___
 
-
-
-​     
+​      
 
 # Understanding Asynchronous Node.js
-
-
 
 Node.js 에는 Javascript 를 구동할 v8 엔진과 그 외 여러 라이브러리들로 구성되어있는데, 주로 libuv 라이브러리에 중점을 두고 동작원리에 대해 적어보려 한다.
 
@@ -225,18 +213,18 @@ Stack 영역에는 순서대로
 
 ```javascript
 main() 호출
-  -> 
-  console.log(1) 호출
-  	-> 
-  	console.log(2) 호출
-  		-> 
-  		setTimeout(delay,3000) 호출
-  			-> 
-  			console.log(3) 
-					->
-  				delay() 
-  					-> 
-  					console.log('delay')  
+-> 
+console.log(1) 호출
+-> 
+console.log(2) 호출
+-> 
+setTimeout(delay,3000) 호출
+-> 
+console.log(3) 
+->
+delay() 
+-> 
+console.log('delay')  
 ```
 
 순으로 호출이 된다.
