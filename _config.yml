@@ -1,4 +1,4 @@
-title: Hello!
+title: Enjoy your life!
 description: > 				# this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -14,7 +14,7 @@ author-img: img-main-profile.jpg 	# add your photo
 about-author: Web developer 		# add description
 social-twitter: 			# add your Twitter handle
 social-facebook: 			# add your Facebook handle
-social-github: artemsheludko 		# add your Github handle
+social-github: eotlr0806 		# add your Github handle
 social-linkedin: 			# add your Linkedin handle
 social-email: eotlr0806@naver.com 	# add your Email address
 
